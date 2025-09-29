@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Jesús Barrios — Hoja de presentación</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Foto: cambia la ruta por tu archivo -->
+    <img class="foto" src="imagnes/jysu.jpg" alt="Foto de Jesús">
+
+    <h1>Jesús Barrios Rodrigues</h1>
+
+    <div class="box">
+      <h2>Sobre mí</h2>
+      <p>Soy estudiante del SENA que cursa Análisis y Desarrollo de Software. Me apasiona la programación y tengo conocimientos sólidos en Python y bases de datos. Me gusta crear proyectos y automatizar tareas. Actualmente estoy en el segundo trimestre.</p>
+    </div>
+
+    <div class="box">
+      <h2>Conocimientos</h2>
+      <ul>
+        <li>Python (bases sólidas)</li>
+        <li>HTML básico</li>
+        <li>CSS básico</li>
+        <li>Bases de datos (conceptos)</li>
+      </ul>
+    </div>
+
+    <div class="box">
+      <h2>Contactos</h2>
+      <p>TEL: 3015531209</p>
+      <p>Correo: <a href="mailto:jesusbarriosrodrig6@gmail.com">jesusbarriosrodrig6@gmail.com</a></p>
+      <p>Facebook: Jysus Akijiro</p>
+    </div>
+
+    <div class="box">
+      <h2>Enviar mensaje (simulación)</h2>
+      <form id="form">
+        <label>Nombre<br>
+          <input type="text" id="name" required>
+        </label>
+        <br>
+        <label>Correo<br>
+          <input type="email" id="email" required>
+        </label>
+        <br>
+        <label>Mensaje<br>
+          <textarea id="message" required></textarea>
+        </label>
+        <br>
+        <button type="submit">Enviar (simulado)</button>
+      </form>
+      <p id="status" class="status" aria-live="polite" style="display:none"></p>
+    </div>
+
+    <p class="foot">Hecho por Jesús — Página simple para práctica.</p>
+  </div>
+
+  <script>
+    // Simulación local: no envía correos
+    document.getElementById('form').addEventListener('submit', function(e){
+      e.preventDefault();
+      const n = document.getElementById('name').value.trim();
+      const em = document.getElementById('email').value.trim();
+      const m = document.getElementById('message').value.trim();
+      const s = document.getElementById('status');
+
+      if(!n || !em || !m){
+        s.style.display = 'block';
+        s.textContent = 'Por favor completa todos los campos.';
+        return;
+      }
+      s.style.display = 'block';
+      s.textContent = 'Mensaje recibido (simulado). Gracias, ' + n + '.';
+      this.reset();
+      setTimeout(()=> s.style.display = 'none', 3000);
+    });
+  </script>
+</body>
+</html>

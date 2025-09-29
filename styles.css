@@ -1,0 +1,90 @@
+/* Paleta: negro, gris y morado - versión simple */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #0a0a0a;     /* negro */
+  color: #d7d7d7;          /* gris claro para texto */
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  background: #111111;     /* gris muy oscuro para tarjeta */
+  border: 1px solid #222;  /* borde sutil */
+  padding: 14px;
+  border-radius: 6px;
+}
+
+/* Foto simple */
+.foto {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto 12px auto;
+  border-radius: 6px;
+  border: 1px solid #2a2a2a;
+}
+
+/* Títulos */
+h1 {
+  text-align: center;
+  font-size: 20px;
+  margin: 6px 0 12px 0;
+  color: #e8e8e8;
+}
+h2 {
+  font-size: 16px;
+  margin: 0 0 8px 0;
+  color: #7a49b1; /* morado discreto */
+}
+
+/* Cajas simples */
+.box {
+  background: #151515;    /* caja un poco más clara que el fondo de la tarjeta */
+  border: 1px solid #202020;
+  padding: 10px;
+  margin-bottom: 12px;
+  border-radius: 6px;
+}
+
+/* Formulario muy básico */
+input[type="text"], input[type="email"], textarea {
+  width: 100%;
+  padding: 6px;
+  margin-top: 6px;
+  border: 1px solid #2b2b2b;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 14px;
+  background: #0f0f0f;
+  color: #e6e6e6;
+}
+textarea { min-height: 80px; }
+
+button {
+  margin-top: 8px;
+  padding: 8px 12px;
+  border: none;
+  background: #7a49b1; /* morado */
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Nota inferior */
+.foot {
+  text-align: center;
+  font-size: 13px;
+  color: #bdbdbd;
+  margin-top: 14px;
+}
+
+/* Enlaces */
+a { color: #bfa6e6; text-decoration: none; }
+
+/* Ajuste móvil mínimo */
+@media (max-width: 420px) {
+  .foto { width: 100px; height: 100px; }
+}
